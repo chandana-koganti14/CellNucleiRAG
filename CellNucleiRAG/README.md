@@ -483,8 +483,8 @@ In our case, we can send questions to `http://localhost:5000/question`.
 
 For more information, visit the [official Flask documentation](https://flask.palletsprojects.com/).
 
-## Acknowledgements 
-This project was implemented for 
-[LLM Zoomcamp](https://github.com/DataTalksClub/llm-zoomcamp) - which is a free course about LLMs and RAG.
+## Acknowledgements
+
+This project was implemented for [LLM Zoomcamp](https://github.com/DataTalksClub/llm-zoomcamp). Special thanks to Alexey Grigorev and the DataTalks team for providing this valuable course on LLMs and RAG.
 
 
