@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histopathology Assistant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;700&display=swap');
+        
+        body {
+            font-family: 'Exo 2', sans-serif;
+            color: #e0e0e0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 20px;
+            background-image: url("{{ url_for('static', filename='images/ab8e9248-42cb-4013-8512-04e62.pngb7a8edf_large.png') }}");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(10, 25, 47, 0.85);
+            z-index: -1;
+        }
+
+        .container {
+            background: rgba(10, 25, 47, 0.7);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 0 20px rgba(100, 255, 218, 0.3);
+            max-width: 800px;
+            width: 100%;
+            backdrop-filter: blur(5px);
+            min-height: 400px;
+        }
+
+        .input-area, .output-area {
+            background: rgba(17, 34, 64, 0.6);
+            border-radius: 10px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        #question {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid #64ffda;
+            color: #e0e0e0;
+            min-height: 100px;
+        }
+
+        #searchBtn {
+            background: linear-gradient(45deg, #64ffda, #00a8e8);
+            transition: all 0.3s ease;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        #searchBtn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(100, 255, 218, 0.4);
+        }
+
+        .loader {
+            border: 4px solid rgba(100, 255, 218, 0.3);
+            border-radius: 50%;
+            border-top: 4px solid #64ffda;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-4xl font-bold mb-6 text-center text-64ffda">Histopathology Assistant</h1>
+        <div class="input-area">
+            <label for="question" class="block text-xl font-medium mb-2">Enter your question:</label>
+            <textarea id="question" rows="4" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-64ffda bg-opacity-50" placeholder="e.g., What are the characteristics of malignant cell nuclei?"></textarea>
+        </div>
+        <button id="searchBtn" class="w-full bg-64ffda hover:bg-00a8e8 text-0a192f font-bold py-2 px-4 rounded-lg transition duration-300 ease-in-out transform hover:scale-105">
+            Analyze
+        </button>
+        <div id="loader" class="hidden mt-4 flex justify-center">
+            <div class="loader"></div>
+        </div>
+        <div id="answerContainer" class="mt-4 hidden output-area">
+            <h2 class="text-xl font-semibold mb-2">Analysis Results:</h2>
+            <p id="answer" class="text-64ffda"></p>
+        </div>
+    </div>
+
+    <script>
+        const searchBtn = document.getElementById('searchBtn');
+        const questionInput = document.getElementById('question');
+        const answerContainer = document.getElementById('answerContainer');
+        const answerText = document.getElementById('answer');
+        const loader = document.getElementById('loader');
+
+        searchBtn.addEventListener('click', async () => {
+            const question = questionInput.value.trim();
+            if (!question) return;
+
+            loader.classList.remove('hidden');
+            answerContainer.classList.add('hidden');
+
+            try {
+                const response = await fetch('/question', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ question }),
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const data = await response.json();
+
+                answerText.textContent = data.answer;
+                answerContainer.classList.remove('hidden');
+            } catch (error) {
+                console.error('Error:', error);
+                answerText.textContent = 'An error occurred while fetching the answer. Please try again.';
+                answerContainer.classList.remove('hidden');
+            } finally {
+                loader.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,338 @@
+id,cell_nuclei_type,dataset_name,tasks,models
+0,Epithelial,MoNuSAC,Segmentation,Hover-Net
+1,Lymphocyte,MoNuSAC,Segmentation,Hover-Net
+2,Macrophage,MoNuSAC,Segmentation,Hover-Net
+3,Neutrophil,MoNuSAC,Segmentation,Hover-Net
+4,Epithelial,PanNuke,Classification,ResNet
+5,Lymphocyte,PanNuke,Classification,ResNet
+6,Macrophage,PanNuke,Classification,ResNet
+7,Neutrophil,PanNuke,Classification,ResNet
+8,Plasma Cell,Camelyon16,Detection,Mask R-CNN
+9,Fibroblast,LUNG,Segmentation,DeepLab
+10,Epithelial,CoNSeP,Classification,Inception-V3
+11,Lymphocyte,CoNSeP,Segmentation,U-Net
+12,Macrophage,TNBC,Segmentation and Classification,Hover-Net
+13,Neutrophil,TNBC,Detection,Mask R-CNN
+14,Plasma Cell,MoNuSAC,Segmentation,ResNet
+15,Fibroblast,PanNuke,Classification,DeepLab
+16,Epithelial,LUNG,Detection,Inception-V3
+17,Lymphocyte,Camelyon16,Segmentation,U-Net
+18,Macrophage,TNBC,Classification,ResNet
+19,Neutrophil,CoNSeP,Segmentation and Classification,Hover-Net
+20,Plasma Cell,PanNuke,Detection,Mask R-CNN
+21,Fibroblast,Camelyon16,Segmentation,DeepLab
+22,Epithelial,MoNuSAC,Classification,Inception-V3
+23,Lymphocyte,LUNG,Detection,U-Net
+24,Macrophage,PanNuke,Segmentation,ResNet
+25,Neutrophil,MoNuSAC,Segmentation and Classification,Hover-Net
+26,Plasma Cell,PanNuke,Classification,ResNet
+27,Fibroblast,TNBC,Detection,Mask R-CNN
+28,Epithelial,CoNSeP,Segmentation,DeepLab
+29,Lymphocyte,Camelyon16,Classification,Inception-V3
+30,Macrophage,LUNG,Detection,U-Net
+31,Neutrophil,PanNuke,Segmentation,ResNet
+32,Plasma Cell,MoNuSAC,Classification,Hover-Net
+33,Fibroblast,MoNuSAC,Segmentation,Mask R-CNN
+34,Epithelial,TNBC,Classification,DeepLab
+35,Lymphocyte,LUNG,Detection,Inception-V3
+36,Macrophage,Camelyon16,Segmentation,U-Net
+37,Neutrophil,CoNSeP,Segmentation and Classification,ResNet
+38,Plasma Cell,PanNuke,Detection,Hover-Net
+39,Fibroblast,TNBC,Segmentation,DeepLab
+40,Lymphocyte,CoNSeP,Segmentation,Mask R-CNN
+41,Macrophage,LUNG,Detection,Hover-Net
+42,Neutrophil,Camelyon16,Classification,DeepLab
+43,Plasma Cell,MoNuSAC,Segmentation,Inception-V3
+44,Fibroblast,PanNuke,Classification,U-Net
+45,Epithelial,Camelyon16,Detection,ResNet
+46,Lymphocyte,LUNG,Segmentation and Classification,Hover-Net
+47,Macrophage,MoNuSAC,Classification,Mask R-CNN
+48,Neutrophil,TNBC,Segmentation,DeepLab
+49,Plasma Cell,CoNSeP,Classification,Inception-V3
+50,Fibroblast,PanNuke,Detection,U-Net
+51,Epithelial,LUNG,Segmentation,ResNet
+52,Lymphocyte,TNBC,Classification,Hover-Net
+53,Macrophage,Camelyon16,Segmentation and Classification,Mask R-CNN
+54,Neutrophil,MoNuSAC,Detection,DeepLab
+55,Plasma Cell,PanNuke,Segmentation,Inception-V3
+56,Fibroblast,LUNG,Classification,U-Net
+57,Epithelial,CoNSeP,Detection,ResNet
+58,Lymphocyte,Camelyon16,Segmentation and Classification,Hover-Net
+59,Macrophage,PanNuke,Classification,Mask R-CNN
+60,Neutrophil,MoNuSAC,Segmentation,DeepLab
+61,Fibroblast,LUNG,Detection,U-Net
+62,Epithelial,TNBC,Segmentation,ResNet
+63,Lymphocyte,MoNuSAC,Classification,Hover-Net
+64,Macrophage,Camelyon16,Segmentation,Mask R-CNN
+65,Neutrophil,PanNuke,Segmentation and Classification,DeepLab
+66,Plasma Cell,PanNuke,Detection,Inception-V3
+67,Fibroblast,CoNSeP,Classification,U-Net
+68,Epithelial,MoNuSAC,Detection,ResNet
+69,Lymphocyte,LUNG,Segmentation,Hover-Net
+70,Macrophage,TNBC,Classification,Mask R-CNN
+71,Neutrophil,Camelyon16,Segmentation,DeepLab
+72,Plasma Cell,PanNuke,Classification,Inception-V3
+73,Fibroblast,MoNuSAC,Detection,U-Net
+74,Epithelial,CoNSeP,Segmentation and Classification,ResNet
+75,Lymphocyte,TNBC,Detection,Hover-Net
+76,Macrophage,PanNuke,Segmentation,Mask R-CNN
+77,Neutrophil,LUNG,Classification,DeepLab
+78,Plasma Cell,MoNuSAC,Detection,Inception-V3
+79,Fibroblast,PanNuke,Segmentation,U-Net
+80,Epithelial,CoNSeP,Classification,ResNet
+81,Macrophage,LUNG,Classification,Mask R-CNN
+82,Neutrophil,TNBC,Segmentation and Classification,DeepLab
+83,Plasma Cell,Camelyon16,Detection,Inception-V3
+84,Epithelial,TNBC,Classification,ResNet
+85,Lymphocyte,CoNSeP,Detection,Hover-Net
+86,Macrophage,MoNuSAC,Segmentation,Mask R-CNN
+87,Neutrophil,PanNuke,Classification,DeepLab
+88,Plasma Cell,LUNG,Detection,Inception-V3
+89,Fibroblast,TNBC,Segmentation,U-Net
+90,Epithelial,CoNSeP,Classification,Inception-ResNet
+91,Lymphocyte,Camelyon17,Detection,EfficientNet
+92,Macrophage,LUNG,Segmentation,FPN
+93,Neutrophil,TNBC,Classification,DenseNet
+94,Plasma Cell,MoNuSAC,Detection,SSD
+95,Fibroblast,PanNuke,Segmentation,UNet++
+96,Epithelial,CoNSeP,Segmentation,HRNet
+97,Lymphocyte,MoNuSAC,Detection,Faster R-CNN
+98,Macrophage,Camelyon16,Classification,VGG16
+99,Neutrophil,LUNG,Detection,YOLOv4
+100,Plasma Cell,PanNuke,Classification,Xception
+101,Fibroblast,TNBC,Segmentation,LinkNet
+102,Epithelial,MoNuSAC,Detection,YOLOv5
+103,Lymphocyte,Camelyon17,Classification,MobileNetV2
+104,Macrophage,LUNG,Detection,RetinaNet
+105,Neutrophil,PanNuke,Segmentation,Dual Path Network
+106,Plasma Cell,CoNSeP,Classification,EfficientNet-B3
+107,Fibroblast,Camelyon16,Detection,RefineNet
+108,Epithelial,MoNuSAC,Segmentation,DenseUNet
+109,Lymphocyte,TNBC,Classification,NASNet
+110,Macrophage,PanNuke,Detection,YOLOv3
+111,Neutrophil,CoNSeP,Segmentation,PSPNet
+112,Plasma Cell,LUNG,Detection,FPN
+113,Fibroblast,Camelyon17,Classification,ResNeXt
+114,Epithelial,MoNuSAC,Detection,Faster R-CNN
+115,Lymphocyte,PanNuke,Segmentation,UNet3+
+116,Macrophage,CoNSeP,Classification,Inception-V4
+117,Neutrophil,LUNG,Detection,RetinaNet
+118,Plasma Cell,TNBC,Segmentation,Attn-UNet
+119,Fibroblast,Camelyon16,Detection,YOLOv4
+120,Epithelial,MoNuSAC,Classification,MobileNet
+121,Lymphocyte,PanNuke,Detection,YOLOv5
+122,Macrophage,Camelyon17,Segmentation,HRNet
+123,Neutrophil,CoNSeP,Classification,VGG19
+124,Plasma Cell,LUNG,Detection,SSD
+125,Fibroblast,PanNuke,Segmentation,DeepLabV3+
+126,Epithelial,TNBC,Detection,YOLOv4
+127,Lymphocyte,MoNuSAC,Classification,ResNet50
+128,Macrophage,Camelyon16,Detection,YOLOv3
+129,Neutrophil,PanNuke,Segmentation,UNet++
+130,Plasma Cell,LUNG,Classification,EfficientNet-B1
+131,Fibroblast,TNBC,Detection,SSD
+132,Epithelial,CoNSeP,Segmentation,DenseNet
+133,Lymphocyte,PanNuke,Classification,Xception
+134,Macrophage,MoNuSAC,Detection,RetinaNet
+135,Neutrophil,Camelyon17,Segmentation,RefineNet
+136,Plasma Cell,PanNuke,Detection,YOLOv5
+137,Fibroblast,MoNuSAC,Classification,NASNet
+138,Epithelial,LUNG,Segmentation,FPN
+139,Lymphocyte,TNBC,Detection,YOLOv4
+140,Macrophage,PanNuke,Classification,EfficientNet
+141,Neutrophil,CoNSeP,Segmentation,UNet3+
+142,Plasma Cell,Camelyon16,Detection,Faster R-CNN
+143,Fibroblast,PanNuke,Classification,Inception-V3
+144,Epithelial,MoNuSAC,Detection,SSD
+145,Lymphocyte,LUNG,Segmentation,UNet++
+146,Macrophage,CoNSeP,Classification,MobileNetV3
+147,Neutrophil,Camelyon17,Detection,YOLOv5
+148,Plasma Cell,PanNuke,Segmentation,HRNet
+149,Fibroblast,MoNuSAC,Classification,ResNet101
+150,Lymphocyte,Camelyon16,Segmentation,DeepLabV3+
+151,Macrophage,PanNuke,Detection,RetinaNet
+152,Neutrophil,LUNG,Classification,VGG16
+153,Plasma Cell,CoNSeP,Segmentation,DenseNet
+154,Fibroblast,MoNuSAC,Detection,YOLOv3
+155,Epithelial,Camelyon17,Classification,Inception-ResNet
+156,Lymphocyte,TNBC,Detection,SSD
+157,Macrophage,PanNuke,Segmentation,UNet3+
+158,Neutrophil,MoNuSAC,Classification,EfficientNet
+159,Plasma Cell,Camelyon16,Detection,YOLOv5
+160,Fibroblast,PanNuke,Segmentation,FPN
+161,Epithelial,CoNSeP,Detection,Faster R-CNN
+162,Lymphocyte,LUNG,Classification,DenseNet
+163,Macrophage,PanNuke,Segmentation,HRNet
+164,Neutrophil,Camelyon17,Detection,SSD
+165,Plasma Cell,MoNuSAC,Classification,UNet++
+166,Fibroblast,TNBC,Segmentation,DeepLabV3+
+167,Epithelial,LUNG,Detection,YOLOv3
+168,Macrophage,CoNSeP,Segmentation,RetinaNet
+169,Neutrophil,Camelyon16,Detection,Faster R-CNN
+170,Plasma Cell,MoNuSAC,Segmentation,DenseUNet
+171,Fibroblast,PanNuke,Classification,ResNet50
+172,Epithelial,Camelyon17,Detection,YOLOv5
+173,Lymphocyte,LUNG,Segmentation,PSPNet
+174,Macrophage,TNBC,Classification,EfficientNet-B0
+175,Neutrophil,MoNuSAC,Detection,YOLOv4
+176,Plasma Cell,PanNuke,Segmentation,DeepLabV3+
+177,Fibroblast,Camelyon16,Classification,NASNet
+178,Epithelial,PanNuke,Detection,SSD
+179,Lymphocyte,CoNSeP,Segmentation,UNet3+
+180,Macrophage,LUNG,Classification,DenseNet
+181,Plasma Cell,MoNuSAC,Segmentation,FPN
+182,Fibroblast,PanNuke,Classification,Inception-V4
+183,Epithelial,TNBC,Detection,RetinaNet
+184,Lymphocyte,Camelyon16,Segmentation,EfficientNet-B1
+185,Macrophage,MoNuSAC,Classification,ResNeXt
+186,Neutrophil,CoNSeP,Detection,Faster R-CNN
+187,Plasma Cell,PanNuke,Segmentation,UNet++
+188,Fibroblast,LUNG,Classification,VGG19
+189,Epithelial,Camelyon17,Detection,YOLOv4
+190,Lymphocyte,TNBC,Segmentation,PSPNet
+191,Neutrophil,MoNuSAC,Detection,SSD
+192,Plasma Cell,CoNSeP,Segmentation,HRNet
+193,Fibroblast,Camelyon16,Classification,Inception-ResNet
+194,Epithelial,LUNG,Detection,YOLOv5
+195,Lymphocyte,PanNuke,Classification,ResNet101
+196,Macrophage,TNBC,Segmentation,DeepLabV3+
+197,Neutrophil,MoNuSAC,Classification,Xception
+198,Plasma Cell,Camelyon17,Detection,YOLOv3
+199,Epithelial,CoNSeP,Classification,MobileNetV3
+200,Lymphocyte,LUNG,Detection,RetinaNet
+201,Macrophage,PanNuke,Segmentation,UNet++
+202,Neutrophil,Camelyon16,Classification,EfficientNet-B2
+203,Plasma Cell,MoNuSAC,Detection,YOLOv5
+204,Fibroblast,PanNuke,Segmentation,DenseNet
+205,Epithelial,TNBC,Detection,SSD
+206,Macrophage,LUNG,Classification,NASNet
+207,Neutrophil,Camelyon17,Detection,Faster R-CNN
+208,Fibroblast,MoNuSAC,Classification,ResNeXt
+209,Epithelial,LUNG,Detection,YOLOv4
+210,Lymphocyte,PanNuke,Segmentation,EfficientNet
+211,Macrophage,Camelyon16,Detection,SSD
+212,Neutrophil,MoNuSAC,Classification,Inception-V3
+213,Plasma Cell,CoNSeP,Segmentation,DenseUNet
+214,Fibroblast,Camelyon17,Detection,YOLOv5
+215,Epithelial,TNBC,Classification,Xception
+216,Lymphocyte,LUNG,Detection,YOLOv3
+217,Macrophage,PanNuke,Segmentation,DeepLabV3+
+218,Neutrophil,CoNSeP,Classification,EfficientNet-B3
+219,Plasma Cell,MoNuSAC,Detection,RetinaNet
+220,Epithelial,Camelyon16,Classification,DenseNet
+221,Neutrophil,LUNG,Classification,MobileNet
+222,Fibroblast,CoNSeP,Segmentation,UNet++
+223,Epithelial,Camelyon17,Classification,ResNet101
+224,Lymphocyte,PanNuke,Detection,SSD
+225,Macrophage,TNBC,Segmentation,HRNet
+226,Neutrophil,MoNuSAC,Classification,EfficientNet-B0
+227,Plasma Cell,LUNG,Detection,YOLOv4
+228,Fibroblast,Camelyon16,Segmentation,DenseUNet
+229,Epithelial,PanNuke,Detection,YOLOv3
+230,Lymphocyte,CoNSeP,Classification,Inception-V4
+231,Macrophage,LUNG,Segmentation,DeepLabV3+
+232,Neutrophil,Camelyon17,Detection,RetinaNet
+233,Plasma Cell,MoNuSAC,Segmentation,UNet++
+234,Fibroblast,PanNuke,Classification,Xception
+235,Lymphocyte,LUNG,Segmentation,FPN
+236,Neutrophil,CoNSeP,Detection,YOLOv5
+237,Plasma Cell,Camelyon16,Segmentation,HRNet
+238,Macrophage,Camelyon17,Detection,SSD
+239,Plasma Cell,PanNuke,Segmentation,DenseNet
+240,Fibroblast,CoNSeP,Detection,Faster R-CNN
+241,Epithelial,LUNG,Classification,MobileNetV3
+242,Lymphocyte,TNBC,Detection,YOLOv3
+243,Epithelial,CoNSeP,Classification,NASNet
+244,Lymphocyte,MoNuSAC,Detection,YOLOv3
+245,Neutrophil,Camelyon16,Classification,EfficientNet-B1
+246,Plasma Cell,LUNG,Detection,RetinaNet
+247,Fibroblast,Camelyon17,Segmentation,FPN
+248,Epithelial,TNBC,Classification,DenseNet
+249,Lymphocyte,MoNuSAC,Segmentation,UNet++
+250,Macrophage,PanNuke,Detection,YOLOv4
+251,Neutrophil,CoNSeP,Classification,MobileNet
+252,Plasma Cell,LUNG,Segmentation,DeepLabV3+
+253,Fibroblast,Camelyon16,Detection,YOLOv5
+254,Epithelial,PanNuke,Classification,Xception
+255,Lymphocyte,CoNSeP,Detection,SSD
+256,Macrophage,MoNuSAC,Segmentation,UNet3+
+257,Neutrophil,LUNG,Classification,Inception-ResNet
+258,Plasma Cell,PanNuke,Detection,YOLOv3
+259,Fibroblast,TNBC,Segmentation,EfficientNet
+260,Lymphocyte,MoNuSAC,Detection,RetinaNet
+261,Neutrophil,CoNSeP,Classification,EfficientNet-B0
+262,Lymphocyte,PanNuke,Classification,ResNeXt
+263,Macrophage,Camelyon17,Segmentation,FPN
+264,Neutrophil,TNBC,Detection,SSD
+265,Lymphocyte,Camelyon16,Classification,NASNet
+266,Macrophage,MoNuSAC,Segmentation,DeepLabV3+
+267,Neutrophil,PanNuke,Detection,YOLOv4
+268,Plasma Cell,CoNSeP,Classification,MobileNetV3
+269,Fibroblast,LUNG,Segmentation,HRNet
+270,Epithelial,TNBC,Detection,Faster R-CNN
+271,Macrophage,Camelyon17,Classification,EfficientNet-B2
+272,Fibroblast,CoNSeP,Detection,YOLOv5
+273,Epithelial,LUNG,Classification,Inception-V4
+274,Lymphocyte,Camelyon16,Detection,RetinaNet
+275,Macrophage,MoNuSAC,Segmentation,UNet++
+276,Neutrophil,PanNuke,Classification,Xception
+277,Plasma Cell,Camelyon17,Detection,YOLOv4
+278,Epithelial,CoNSeP,Classification,ResNet50
+279,Macrophage,PanNuke,Segmentation,EfficientNet
+280,Neutrophil,MoNuSAC,Classification,MobileNet
+281,Plasma Cell,CoNSeP,Detection,YOLOv5
+282,Fibroblast,Camelyon16,Segmentation,HRNet
+283,Lymphocyte,MoNuSAC,Segmentation,UNet3+
+284,Macrophage,Camelyon17,Classification,DenseNet
+285,Plasma Cell,PanNuke,Segmentation,FPN
+286,Fibroblast,TNBC,Classification,NASNet
+287,Epithelial,CoNSeP,Detection,RetinaNet
+288,Lymphocyte,MoNuSAC,Segmentation,DenseUNet
+289,Macrophage,Camelyon16,Detection,YOLOv5
+290,Neutrophil,PanNuke,Classification,Inception-V3
+291,Plasma Cell,LUNG,Detection,Faster R-CNN
+292,Fibroblast,Camelyon17,Segmentation,UNet++
+293,Epithelial,TNBC,Classification,EfficientNet-B1
+294,Lymphocyte,MoNuSAC,Detection,SSD
+295,Neutrophil,CoNSeP,Classification,ResNet101
+296,Fibroblast,Camelyon16,Segmentation,DeepLabV3+
+297,Epithelial,MoNuSAC,Detection,YOLOv3
+298,Macrophage,Camelyon17,Segmentation,DenseNet
+299,Neutrophil,TNBC,Detection,RetinaNet
+300,Fibroblast,PanNuke,Classification,Inception-ResNet
+301,Epithelial,CoNSeP,Detection,YOLOv5
+302,Lymphocyte,LUNG,Segmentation,EfficientNet
+303,Macrophage,Camelyon16,Classification,MobileNetV3
+304,Neutrophil,PanNuke,Detection,SSD
+305,Plasma Cell,MoNuSAC,Segmentation,HRNet
+306,Fibroblast,Camelyon17,Classification,DenseUNet
+307,Macrophage,CoNSeP,Classification,EfficientNet-B2
+308,Neutrophil,LUNG,Detection,YOLOv3
+309,Plasma Cell,MoNuSAC,Segmentation,DenseNet
+310,Fibroblast,Camelyon16,Detection,RetinaNet
+311,Macrophage,Camelyon17,Detection,YOLOv5
+312,Neutrophil,TNBC,Classification,NASNet
+313,Plasma Cell,CoNSeP,Segmentation,FPN
+314,Fibroblast,LUNG,Detection,Faster R-CNN
+315,Epithelial,PanNuke,Segmentation,HRNet
+316,Lymphocyte,Camelyon16,Classification,DenseNet
+317,Macrophage,MoNuSAC,Detection,YOLOv3
+318,Neutrophil,PanNuke,Segmentation,EfficientNet
+319,Plasma Cell,Camelyon17,Classification,MobileNet
+320,Epithelial,LUNG,Segmentation,UNet++
+321,Lymphocyte,MoNuSAC,Classification,Inception-V4
+322,Neutrophil,CoNSeP,Segmentation,DeepLabV3+
+323,Epithelial,MoNuSAC,Classification,EfficientNet-B0
+324,Macrophage,Camelyon17,Segmentation,DenseUNet
+325,Plasma Cell,CoNSeP,Detection,Faster R-CNN
+326,Fibroblast,LUNG,Segmentation,FPN
+327,Neutrophil,PanNuke,Classification,Inception-ResNet
+328,Plasma Cell,Camelyon17,Segmentation,HRNet
+329,Fibroblast,TNBC,Detection,RetinaNet
+330,Epithelial,LUNG,Segmentation,DeepLabV3+
+331,Lymphocyte,MoNuSAC,Detection,YOLOv4
+332,Plasma Cell,LUNG,Segmentation,DenseNet
+333,Fibroblast,Camelyon16,Classification,MobileNetV3
+334,Lymphocyte,PanNuke,Segmentation,FPN
+335,Macrophage,Camelyon17,Classification,ResNet101
+336,Neutrophil,TNBC,Detection,YOLOv3
