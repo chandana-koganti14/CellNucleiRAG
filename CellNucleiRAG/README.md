@@ -319,19 +319,14 @@ pipenv run python test.py
 
 ## Code
 
-The code for the application is in the [`fitness_assistant`](fitness_assistant/) folder:
+The code for the application is in the [`cellnuclei`](celnuclei/) folder:
 
-- [`app.py`](fitness_assistant/app.py) - the Flask API, the main entrypoint to the application
-- [`rag.py`](fitness_assistant/rag.py) - the main RAG logic for building the retrieving the data and building the prompt
-- [`ingest.py`](fitness_assistant/ingest.py) - loading the data into the knowledge base
-- [`minsearch.py`](fitness_assistant/minsearch.py) - an in-memory search engine
-- [`db.py`](fitness_assistant/db.py) - the logic for logging the requests and responses to postgres
-- [`db_prep.py`](fitness_assistant/db_prep.py) - the script for initializing the database
-
-We also have some code in the project root directory:
-
-- [`test.py`](test.py) - select a random question for testing
-- [`cli.py`](cli.py) - interactive CLI for the APP
+- [`app.py`](cellnuclei/app.py) - the Flask API, the main entrypoint to the application
+- [`rag.py`](cellnuclei/rag.py) - the main RAG logic for building the retrieving the data and building the prompt
+- [`ingest.py`](cellnuclei/ingest.py) - loading the data into the knowledge base
+- [`minsearch.py`](cellnuclei/minsearch.py) - an in-memory search engine
+- [`db.py`](cellnuclei/db.py) - the logic for logging the requests and responses to postgres
+- [`prep.py`](cellnuclei/prep.py) - the script for initializing the database
 
 ### Interface
 
@@ -342,13 +337,13 @@ for examples on how to interact with the application.
 
 ### Ingestion
 
-The ingestion script is in [`ingest.py`](fitness_assistant/ingest.py).
+The ingestion script is in [`ingest.py`](cellnuclei/ingest.py).
 
 Since we use an in-memory database, `minsearch`, as our
 knowledge base, we run the ingestion script at the startup
 of the application.
 
-It's executed inside [`rag.py`](fitness_assistant/rag.py)
+It's executed inside [`rag.py`](cellnuclei/rag.py)
 when we import it.
 
 
@@ -367,7 +362,7 @@ pipenv run jupyter notebook
 We have the following notebooks:
 
 - [`rag-test.ipynb`](notebooks/rag-test.ipynb): The RAG flow and evaluating the system.
-- [`evaluation-data-generation.ipynb`](notebooks/evaluation-data-generation.ipynb): Generating the ground truth dataset for retrieval evaluation.
+- [`evaluation-data-generation.ipynb`](notebooks/evaluation-data.ipynb): Generating the ground truth dataset for retrieval evaluation.
 
 
 
