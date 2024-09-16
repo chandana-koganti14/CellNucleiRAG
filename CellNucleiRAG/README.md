@@ -16,6 +16,10 @@ The CellNucleiRAG application provides an interactive interface to:
 
 By combining RAG techniques with a comprehensive dataset, CellNucleiRAG aims to enhance the efficiency and accuracy of histopathology analysis, making it a valuable resource for medical research and diagnostics.
 
+<p align="center">
+  <img src="cellnuclei/static/images/ab8e9248-42cb-4013-8512-04e62.pngb7a8edf_large.png">
+</p>
+
 ## Dataset
 
 The dataset used in this project is generated with the help of ChatGPT and is structured to provide detailed information about cell nuclei types, datasets, tasks, and models. The dataset is organized in a CSV format with the following columns:
@@ -480,5 +484,7 @@ In our case, we can send questions to `http://localhost:5000/question`.
 For more information, visit the [official Flask documentation](https://flask.palletsprojects.com/).
 
 ## Acknowledgements 
+This project was implemented for 
+[LLM Zoomcamp](https://github.com/DataTalksClub/llm-zoomcamp) - which is a free course about LLMs and RAG.
 
 
