@@ -412,37 +412,31 @@ Also tested with gpt-4o:
 * 72 PARTIALLY_RELEVANT
 * 13 IRRELEVENT
 
-## Monitoring
+## Monitoring Setup: CellNucleiRAG Project
 
-We use Grafana for monitoring the application. 
+The **CellNucleiRAG** project uses **Grafana** to monitor application performance and usage. This tool provides real-time insights into various aspects of the system, including conversation metrics, model usage, and response times.
 
-It's accessible at [localhost:3000](http://localhost:3000):
+## Accessing the Grafana Dashboard
 
-- Login: "admin"
-- Password: "admin"
+To access the Grafana dashboard, follow these steps:
 
-### Dashboards
+1. **Ensure the Application is Running**
+   - Make sure that the application is running either via Docker or locally.
+  
+2. **Open a Web Browser**
+   - Navigate to [localhost:3000](http://localhost:3000)
 
-<p align="center">
-  <img src="images/dash.png">
-</p>
+3. **Login Credentials**
+   - Use the default login credentials:
+     - **Username**: `admin`
+     - **Password**: `admin`
+   
+## Grafana Dashboard Setup and Customization
 
-The monitoring dashboard contains several panels:
+For setting up and customizing the Grafana dashboard, refer to the configuration files in the `grafana` folder:
 
-1. **Last 5 Conversations (Table):** Displays a table showing the five most recent conversations, including details such as the question, answer, relevance, and timestamp. This panel helps monitor recent interactions with users.
-2. **+1/-1 (Pie Chart):** A pie chart that visualizes the feedback from users, showing the count of positive (thumbs up) and negative (thumbs down) feedback received. This panel helps track user satisfaction.
-3. **Relevancy (Gauge):** A gauge chart representing the relevance of the responses provided during conversations. The chart categorizes relevance and indicates thresholds using different colors to highlight varying levels of response quality.
-4. **OpenAI Cost (Time Series):** A time series line chart depicting the cost associated with OpenAI usage over time. This panel helps monitor and analyze the expenditure linked to the AI model's usage.
-5. **Tokens (Time Series):** Another time series chart that tracks the number of tokens used in conversations over time. This helps to understand the usage patterns and the volume of data processed.
-6. **Model Used (Bar Chart):** A bar chart displaying the count of conversations based on the different models used. This panel provides insights into which AI models are most frequently used.
-7. **Response Time (Time Series):** A time series chart showing the response time of conversations over time. This panel is useful for identifying performance issues and ensuring the system's responsiveness.
-
-### Setting up Grafana
-
-All Grafana configurations are in the [`grafana`](grafana/) folder:
-
-- [`init.py`](grafana/init.py) - for initializing the datasource and the dashboard.
-- [`dashboard.json`](grafana/dashboard.json) - the actual dashboard (taken from LLM Zoomcamp without changes).
+- **init.py**: This script initializes the data source and dashboard configuration.
+- **dashboard.json**: The configuration file for the Grafana dashboard.
 
 To initialize the dashboard, first ensure Grafana is
 running (it starts automatically when you do `docker-compose up`).
