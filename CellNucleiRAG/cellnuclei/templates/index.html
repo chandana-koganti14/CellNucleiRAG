@@ -45,7 +45,7 @@
             min-height: 400px;
         }
 
-        .input-area, .output-area {
+        .input-area, .output-area, .feedback-area {
             background: rgba(17, 34, 64, 0.6);
             border-radius: 10px;
             padding: 1rem;
@@ -69,6 +69,16 @@
         #searchBtn:hover {
             transform: translateY(-2px);
             box-shadow: 0 4px 8px rgba(100, 255, 218, 0.4);
+        }
+
+        .feedback-button {
+            background: #64ffda;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 5px;
+            color: #0a192f;
+            cursor: pointer;
+            font-weight: bold;
         }
 
         .loader {
@@ -103,6 +113,11 @@
             <h2 class="text-xl font-semibold mb-2">Analysis Results:</h2>
             <p id="answer" class="text-64ffda"></p>
         </div>
+        <div id="feedbackContainer" class="mt-4 hidden feedback-area">
+            <h3 class="text-lg font-semibold">Was this answer helpful?</h3>
+            <button class="feedback-button" data-feedback="1">👍 Yes</button>
+            <button class="feedback-button" data-feedback="-1">👎 No</button>
+        </div>
     </div>
 
     <script>
@@ -111,13 +126,17 @@
         const answerContainer = document.getElementById('answerContainer');
         const answerText = document.getElementById('answer');
         const loader = document.getElementById('loader');
+        const feedbackContainer = document.getElementById('feedbackContainer');
+        let conversationId = null;
 
+        // Search Button Click Handler
         searchBtn.addEventListener('click', async () => {
             const question = questionInput.value.trim();
             if (!question) return;
 
-            loader.classList.remove('hidden');
-            answerContainer.classList.add('hidden');
+            loader.classList.remove('hidden');  // Show loader
+            answerContainer.classList.add('hidden');  // Hide previous answer
+            feedbackContainer.classList.add('hidden');  // Hide feedback buttons
 
             try {
                 const response = await fetch('/question', {
@@ -133,16 +152,62 @@
                 }
 
                 const data = await response.json();
+                conversationId = data.conversation_id;
 
                 answerText.textContent = data.answer;
-                answerContainer.classList.remove('hidden');
+                answerContainer.classList.remove('hidden');  // Show answer
+                feedbackContainer.classList.remove('hidden');  // Show feedback buttons
             } catch (error) {
                 console.error('Error:', error);
                 answerText.textContent = 'An error occurred while fetching the answer. Please try again.';
-                answerContainer.classList.remove('hidden');
+                answerContainer.classList.remove('hidden');  // Show error message
             } finally {
-                loader.classList.add('hidden');
+                loader.classList.add('hidden');  // Hide loader
             }
+        });
+
+        // Feedback Button Click Handlers
+        document.querySelectorAll('.feedback-button').forEach(button => {
+            button.addEventListener('click', async (event) => {
+                const feedback = event.target.getAttribute('data-feedback');
+                
+                if (!conversationId) {
+                    console.error("No conversation ID available.");
+                    return;
+                }
+
+                try {
+                    const response = await fetch('/feedback', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                            conversation_id: conversationId,
+                            feedback: parseInt(feedback),
+                        }),
+                    });
+
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+
+                    const data = await response.json();
+                    console.log('Feedback response:', data.message);
+                    
+                    // Disable all feedback buttons after a selection is made
+                    document.querySelectorAll('.feedback-button').forEach(btn => {
+                        btn.disabled = true;
+                        btn.style.opacity = '0.5';
+                    });
+                    
+                    // Show a thank you message
+                    feedbackContainer.innerHTML += '<p class="mt-2 text-green-400">Thank you for your feedback!</p>';
+                    
+                } catch (error) {
+                    console.error('Error sending feedback:', error);
+                }
+            });
         });
     </script>
 </body>
