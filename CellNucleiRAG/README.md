@@ -38,30 +38,9 @@ The place where you can find the dataset is [`data/data.csv`](data/data.csv).
 * Python 3.12
 * Minsearch - for full text-search
 * OpenAI as an LLM
-* Flask as the API interface (see [Background] (#background) for more information on Flask)
+* Flask as the API interface (see [Background](#background) for more information on Flask)
 * Docker and Docker Compose for containerization
 * Grafana for monitoring and PostgreSQL as the backend for it
-
-## Environment Setup
-
-To work with the OpenAI API, you’ll need to configure your environment properly. Since we use OpenAI, you need to provide the API key:
-
-1. Install `direnv`. If you use Ubuntu, run `sudo apt install direnv` and then `direnv hook bash >> ~/.bashrc`.
-2. Copy `.envrc_template` into `.envrc` and insert your key there.
-3. For OpenAI, it's recommended to create a new project and use a separate key.
-4. Run `direnv allow` to load the key into your environment.
-
-For dependency management, we use pipenv, so you need to install it:
-
-```bash
-pip install pipenv
-```
-
-Once installed, you can install the app dependencies:
-
-```bash
-pipenv install --dev
-```
 
 ## Environment Setup Instructions
 
@@ -323,7 +302,7 @@ pipenv run python test.py
 
 ## Code
 
-The code for the application is in the [`cellnuclei`](celnuclei/) folder:
+The code for the application is in the [`cellnuclei`](cellnuclei/) folder:
 
 - [`app.py`](cellnuclei/app.py) - the Flask API, the main entrypoint to the application
 - [`rag.py`](cellnuclei/rag.py) - the main RAG logic for building the retrieving the data and building the prompt
